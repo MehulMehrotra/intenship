@@ -1,1 +1,1 @@
-# intenship
+# Infotech Intenship
