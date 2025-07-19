@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background: #0d6efd;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .projects .project {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #0d6efd;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mehul Mehrotra</h1>
+    <p>Web Developer • JavaScript Enthusiast • Tech Explorer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about" style="text-align:center;">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate web developer with experience in building responsive and user-friendly websites. 
+      I enjoy solving coding challenges and bringing creative ideas to life. 
+      I have a background in IT and currently expanding my skills in front-end and back-end technologies.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Git & GitHub</li>
+      <li>Python</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Stopwatch Web App</h3>
+      <p>A sleek stopwatch built with JavaScript and CSS that lets users start, pause, reset, and log laps.</p>
+    </div>
+    <div class="project">
+      <h3>Tic-Tac-Toe Game</h3>
+      <p>A 2-player interactive game built with HTML, CSS, and JavaScript. Includes win detection and reset functionality.</p>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>This personal portfolio showcases my skills and projects, built with clean responsive design principles.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align: center;">
+      📧 Email: mehul@example.com <br>
+      🌐 GitHub: <a href="https://github.com/" target="_blank">github.com/username</a><br>
+      💼 LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/username</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mehul Mehrotra. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navigation with Hamburger</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation bar */
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #navbar.scrolled {
+      background-color: #333;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    #nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    #nav-links li a:hover {
+      color: #ffcc00;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Content area */
+    .content {
+      padding-top: 100px;
+      padding: 40px;
+    }
+
+    /* Responsive menu for mobile */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      #nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        text-align: right;
+        padding: 10px 0;
+      }
+
+      #nav-links.show {
+        display: flex;
+      }
+
+      #nav-links li {
+        margin: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">MySite</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>Responsive Navigation Menu</h1>
+    <p>Scroll down and resize the window to see the interactive navbar in action.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur sapien ut cursus gravida. Donec tincidunt felis id dolor bibendum, a bibendum lorem ultricies.</p>
+    <p style="margin-top: 1000px;">Bottom of the page</p>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Add or remove class on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
